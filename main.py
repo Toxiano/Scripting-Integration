@@ -13,11 +13,7 @@ os.system('git pull origin dev')
 # Test
 if os.system('python3 test/NombresRomainsTest.py') == 0:
     # Rebase + Fast Forward the commit tested on "main"
-<<<<<<< HEAD
-    os.system('git rebase --onto origin/master origin/dev')
-=======
     os.system('git rebase --onto origin/main origin/dev')
->>>>>>> cb43166bccd6aabdb0da3941bad2693f2d6757ad
 else:
     timestamp = time.strftime('%Y%m%d_%H_%M')
     # Move the commit to the failures branch
